@@ -26,6 +26,8 @@ subdirs := $(addprefix $(LOCAL_PATH)/,$(addsuffix /Android.mk, \
   utils/TableGen \
   ))
 
+LOCAL_CFLAGS := $(call-cc-option,-Qunused-arguments)
+
 include $(LOCAL_PATH)/clang.mk
 
 include $(subdirs)
